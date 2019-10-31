@@ -146,6 +146,18 @@ class ParserPlanetsAndResidents extends Command
         return $Object;
     }
 
+    /**
+     * Парсит объекты по url
+     * @param string $RequestUrl
+     * @param $objectParse
+     * @return int
+     * @throws \Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface
+     * @throws \Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface
+     */
+
     protected function parseObjects(string $RequestUrl, $objectParse): int
     {
         $i = 0;
