@@ -1,0 +1,8 @@
+<ifModule mod_headers.c>
+Header set Connection keep-alive
+</ifModule>
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php

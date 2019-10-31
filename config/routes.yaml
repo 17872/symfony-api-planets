@@ -1,0 +1,10 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+report-parser:
+  path: /report-parser-objects
+  # the controller value has the format 'controller_class::method_name'
+  controller: App\Controller\ReportParserObjectsController::index
+report-parser-only3:
+  path: /report-parser-objects/only3
+  controller: App\Controller\ReportParserObjectsController::only3

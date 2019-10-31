@@ -1,0 +1,22 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<h2>{% if Title is defined %}{{ Title }}{% endif %}</h2>
+<table style="width: 400px; text-align: center;">
+    <tbody>
+        <tr>
+            <th>Название планеты</th>
+            <th>Количество жителей</th>
+        </tr>
+        {% if Objects is defined and Objects|length > 0 %}
+            {% for Object in Objects %}
+                <tr>
+                    <td>{{ Object.name }}</td>
+                    <td>{{ Object.CountResidents }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="2">Объекты не найдены в таблице!</td>
+            </tr>
+        {% endif %}
+    </tbody>
+</table>
